@@ -41,10 +41,10 @@ public class PanelPrincipal extends PanelEstandar{
 				
 		
 		PanelEstandar botonera = new PanelEstandar();
-		botonera.setLayout(new GridLayout(2,2,2,2));
+		botonera.setLayout(new GridLayout(2,2,0,0));
 		
 		PanelEstandar botonaislado = new PanelEstandar();
-		botonaislado.setLayout(new FlowLayout());
+		botonaislado.setLayout(new BorderLayout());
 
 		
 		JButton altausuario = new JButton("Dar alta usuario");
@@ -77,7 +77,7 @@ public class PanelPrincipal extends PanelEstandar{
 		botonera.add(altaapuesta);
 		botonera.add(log);
 		botonera.add(informes);
-		botonaislado.add(altausuario);
+		botonaislado.add(altausuario,BorderLayout.SOUTH);
 		
 		add(botonaislado,BorderLayout.CENTER);
 		add(encabezado,BorderLayout.NORTH);
