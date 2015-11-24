@@ -13,14 +13,15 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class AltaPartido extends PanelEstandar{
+public class AltaApuesta extends PanelEstandar{
 	
-	VentanaPrincipal ventanaprincipal;
+VentanaPrincipal ventanaprincipal;
 	
-	public AltaPartido(VentanaPrincipal principal){
+	public AltaApuesta(VentanaPrincipal principal){
 		super();
 		
 		ventanaprincipal = principal;
@@ -50,27 +51,32 @@ public class AltaPartido extends PanelEstandar{
 		
 		formulario.setLayout(new GridLayout(4,2,2,2));
 		
-		JLabel partido = new JLabel("Nombre Partido:");
+		JLabel partido = new JLabel("Partido:");
 		partido.setForeground(Color.WHITE);
-		JLabel fecha = new JLabel("Fecha:");
-		fecha.setForeground(Color.WHITE);
-		JLabel hora = new JLabel("Hora:");
-		hora.setForeground(Color.WHITE);
+		JLabel descripcion = new JLabel("Descripción:");
+		descripcion.setForeground(Color.WHITE);
+		JLabel cuota = new JLabel("Cuota:");
+		cuota.setForeground(Color.WHITE);
 		JLabel deporte = new JLabel("Deporte:");
 		deporte.setForeground(Color.WHITE);
-		JTextField jtpartido = new JTextField();
-		JTextField jtfecha = new JTextField();
-		JTextField jthora = new JTextField();
-		JTextField jtdeporte = new JTextField();
+		String[] apuestas = { "Madrid-Barcelona", "Betis-Sevilla", "Alcoyano-Albacete" };
+		JComboBox<String> jcpartido = new JComboBox<String>(apuestas);
+		JTextField jtdescripcion = new JTextField();
+		JTextField jtcuota = new JTextField();
+		String[] deportes = { "Futbol", "Baloncesto", "Petanca" };
+		JComboBox<String> jcdeporte = new JComboBox<String>(deportes);
 		
-		formulario.add(partido);
-		formulario.add(jtpartido);
+
+		
+		
 		formulario.add(deporte);
-		formulario.add(jtdeporte);
-		formulario.add(fecha);
-		formulario.add(jtfecha);
-		formulario.add(hora);
-		formulario.add(jthora);
+		formulario.add(jcdeporte);
+		formulario.add(partido);
+		formulario.add(jcpartido);
+		formulario.add(descripcion);
+		formulario.add(jtdescripcion);
+		formulario.add(cuota);
+		formulario.add(jtcuota);
 		
 		
 		PanelEstandar botonera = new PanelEstandar();
@@ -88,14 +94,13 @@ public class AltaPartido extends PanelEstandar{
 		    	  ventanaprincipal.revalidate();
 		    	  ventanaprincipal.repaint();
 
-		    	 
 		      }
 		});
 		
 		alta.addActionListener(new ActionListener(){
 		      public void actionPerformed(ActionEvent e){
 		    	 
-		    	  System.out.println("Partido dado de alta correctamente");
+		    	  System.out.println("Apuesta dada de alta correctamente");
 		    	  
 		      }
 		});

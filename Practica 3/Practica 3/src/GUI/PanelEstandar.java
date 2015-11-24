@@ -13,7 +13,10 @@ public class PanelEstandar extends JPanel{
 	private BufferedImage imgbackground;
 	
 	
+	
 	public PanelEstandar(){
+		
+
 		
 		try {
 			imgbackground = ImageIO.read(new File("img/cesped.jpg"));
@@ -23,6 +26,8 @@ public class PanelEstandar extends JPanel{
 		}
 		
 		repaint();
+		
+		
 	}
 	
 	
