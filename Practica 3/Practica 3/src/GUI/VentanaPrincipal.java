@@ -19,6 +19,13 @@ public class VentanaPrincipal extends JFrame{
 		listaPaneles.add(new PanelPrincipal(this));
 		listaPaneles.add(new AltaPartido(this));
 		listaPaneles.add(new AltaApuesta(this));
+		listaPaneles.add(new Informes(this));
+		listaPaneles.add(new AltaUsuario(this));
+		listaPaneles.add(new Logearte(this));
+		listaPaneles.add(new OpcionesUsuario(this));
+		listaPaneles.add(new IngresoDinero(this));
+		listaPaneles.add(new ApostarDinero(this));
+
 		
 		
 		

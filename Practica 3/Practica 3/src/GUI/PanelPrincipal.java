@@ -73,6 +73,38 @@ public class PanelPrincipal extends PanelEstandar{
 		      }
 		});
 		
+		altausuario.addActionListener(new ActionListener(){
+		      public void actionPerformed(ActionEvent e){
+		    	  ventanaprincipal.panelPadre.removeAll();
+		    	  ventanaprincipal.panelPadre.add(ventanaprincipal.listaPaneles.get(4));
+		    	  ventanaprincipal.revalidate();
+		    	  ventanaprincipal.repaint();
+		    	 
+		      }
+		});
+		
+		
+		log.addActionListener(new ActionListener(){
+		      public void actionPerformed(ActionEvent e){
+		    	  ventanaprincipal.panelPadre.removeAll();
+		    	  ventanaprincipal.panelPadre.add(ventanaprincipal.listaPaneles.get(5));
+		    	  ventanaprincipal.revalidate();
+		    	  ventanaprincipal.repaint();
+		    	 
+		      }
+		});
+		
+		informes.addActionListener(new ActionListener(){
+		      public void actionPerformed(ActionEvent e){
+		    	  ventanaprincipal.panelPadre.removeAll();
+		    	  ventanaprincipal.panelPadre.add(ventanaprincipal.listaPaneles.get(3));
+		    	  ventanaprincipal.revalidate();
+		    	  ventanaprincipal.repaint();
+		    	 
+		      }
+		});
+		
+		
 		botonera.add(altapartido);
 		botonera.add(altaapuesta);
 		botonera.add(log);
